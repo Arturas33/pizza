@@ -2,9 +2,11 @@
 
 namespace App\models;
 
-use Illuminate\Database\Eloquent\Model;
 
-class PMPizzaConnected extends Model
+
+class PMPizzaConnected extends CoreModel
 {
-    //
+    protected $table = 'PM_pizza_connected';
+
+    protected  $fillable = ['id', 'pads_id', 'ingredients_id', 'cheeses_id'];
 }

@@ -2,9 +2,15 @@
 
 namespace App\models;
 
-use Illuminate\Database\Eloquent\Model;
 
-class PMPizzaCheeses extends Model
+
+class PMPizzaCheeses extends CoreModel
 {
-    //
+    protected $table = 'PM_pizza_cheeses';
+
+    protected $fillable = ['id', 'name', 'description'];
+
+    public static function get()
+    {
+    }
 }
