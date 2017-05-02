@@ -11,6 +11,32 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/chees', [
+    'uses' => 'PMPizzaCheesesController@showCreated'
+    ]);
+
+Route::post('/chees', [
+
+    'as' => 'chees',
+    'uses' => 'PMPizzaCheesesController@create'
+    ]);
+
+Route::get('/ingredients', [
+    'uses' => 'PMPizzaIngredientsController@showCreated'
+]);
+
+Route::post('/ingredients', [
+
+    'as' => 'ingredients',
+    'uses' => 'PMPizzaIngredientsController@create'
+]);
+
+Route::get('/pads', [
+    'uses' => 'PMPizzaPadsController@showCreated'
+]);
+
+Route::post('/pads', [
+
+    'as' => 'pads',
+    'uses' => 'PMPizzaPadsController@create'
+]);
