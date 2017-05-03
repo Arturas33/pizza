@@ -20,6 +20,6 @@
 
 {{Form::select('pad_id', $pads)}}
 
-
+{{Form::submit('Gauti')}}
 </body>
 </html>
