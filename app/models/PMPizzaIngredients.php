@@ -8,6 +8,6 @@ class PMPizzaIngredients extends CoreModel
 {
     protected $table = 'PM_pizza_ingredients';
 
-    protected $fillable = ['id', 'name', 'description'];
+    protected $fillable = ['id', 'name', 'description', 'calories'];
 
 }
