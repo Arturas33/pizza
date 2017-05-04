@@ -5,21 +5,29 @@
     <title>Pizza</title>
 </head>
 <body>
+{!! Form::open(['url'=>route('pizza')])!!}
 
+{{Form::label('pads_id', 'Pads')}}
+
+{{Form::select('pads_id', $pads)}}
+<br/>
 {{Form::label('cheeses_id', 'Chees')}}
 
 {{Form::select('cheeses_id', $chees)}}
+<br/>
+@foreach($ingredients as $key => $ingredient )
+{{Form::checkbox('ingredients[]', $key )}}
+{{$ingredient }}
+    <br/>
+@endforeach
+<br/>
 
+{{Form::label('contacts', 'iveskit ')}}
 
-{{Form::label('Ingredients_id', 'Ingredients')}}
-
-{{Form::select('ingredients_id', $ingredients)}}
-
-
-{{Form::label('psd_id', 'Pad')}}
-
-{{Form::select('pad_id', $pads)}}
-
+{{ Form::textarea('contacts') }}
+<br/>
 {{Form::submit('Gauti')}}
+
+{!! Form::close() !!}
 </body>
 </html>

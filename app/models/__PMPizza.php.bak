@@ -27,4 +27,5 @@ class PMPizza extends CoreModel
     {
         return $this->belongsToMany(PMPizzaIngredients::class, 'PM_pizza_ingredients_connected', 'pizza_id', 'ingredients_id');
     }
+
 }

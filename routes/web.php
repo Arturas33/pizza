@@ -11,32 +11,23 @@
 |
 */
 
-Route::get('/chees', [
-    'uses' => 'PMPizzaCheesesController@showCreated'
+
+
+
+Route::get('/', [
+    'uses' => 'PMPizzaController@index'
     ]);
 
-Route::post('/chees', [
 
-    'as' => 'chees',
-    'uses' => 'PMPizzaCheesesController@create'
+Route::get('/pizza', [
+    'uses' => 'PMPizzaController@create'
+]);
+
+
+
+Route::post('/pizza', [
+
+    'as' => 'pizza',
+    'uses' => 'PMPizzaController@store'
     ]);
 
-Route::get('/ingredients', [
-    'uses' => 'PMPizzaIngredientsController@showCreated'
-]);
-
-Route::post('/ingredients', [
-
-    'as' => 'ingredients',
-    'uses' => 'PMPizzaIngredientsController@create'
-]);
-
-Route::get('/pads', [
-    'uses' => 'PMPizzaPadsController@showCreated'
-]);
-
-Route::post('/pads', [
-
-    'as' => 'pads',
-    'uses' => 'PMPizzaPadsController@create'
-]);
